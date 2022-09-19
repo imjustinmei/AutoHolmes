@@ -1,0 +1,27 @@
+{
+  "name": "AutoHolmes",
+  "description": "autofills holmes san homerwork server. poggers",
+  "version": "6.9",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
+  "permissions": ["storage"],
+  "icons": { 
+    "16": "images/grusome_16x16.png",
+    "48": "images/poggers_1_48x48.png",
+    "128": "images/poggers_2_128x128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://bert.stuy.edu/dholmes/fall2022/pages.py?page=submit_homework"],
+      "js": ["start.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "matches": ["http://bert.stuy.edu/*"],
+      "resources": ["content.js"]
+    }
+  ]
+}
